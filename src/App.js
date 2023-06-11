@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import './App.css';
 import Alert from './component/Alert';
-import About from './component/About';
+// import About from './component/About';
 import Navbar from './component/Navbar';
 import TextForm from './component/TextForm';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+// } from "react-router-dom";
 
 
 function App() {
@@ -57,25 +57,25 @@ function App() {
 
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Navbar title="TextEditor" mode={mode} toggleMode={toggleMode} aboutText="About"/>
 
         <strong><Alert alert={alert} /></strong>
 
         <div className="container my-3">
-          <Switch>
+          {/* <Switch>
             <Route exact path="/about">
               <About />
-            </Route>
+            </Route> */}
 
-            <Route exact path="/">
+            {/* <Route exact path="/"> */}
               <TextForm showAlert={showAlert} heading="Enter the text you want to edit" mode={mode} />
-            </Route>
+            {/* </Route> */}
             
-          </Switch>
+          {/* </Switch> */}
         </div>
         
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
